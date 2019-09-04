@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KRSwiftColorPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZn-Da-mb6">
+                                <rect key="frame" x="144.5" y="385.5" width="125" height="125"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="2Yq-es-ZdE"/>
+                                    <constraint firstAttribute="height" constant="125" id="hSV-T9-nTQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKq-63-aFf" userLabel="Horizontal Color Picker" customClass="KRColorPicker" customModule="KRSwiftColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="117" y="542.5" width="180" height="20"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0jp-sn-Mk2"/>
+                                    <constraint firstAttribute="width" constant="180" id="fnD-qB-r8e"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6T-Fn-fkp" userLabel="Horizontal Color Picker" customClass="KRColorPicker" customModule="KRSwiftColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="117" y="333.5" width="180" height="20"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="AqS-DA-KAt"/>
+                                    <constraint firstAttribute="width" constant="180" id="qFW-ec-x4q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eKq-63-aFf" firstAttribute="top" secondItem="fZn-Da-mb6" secondAttribute="bottom" constant="32" id="2C1-3M-Mvs"/>
+                            <constraint firstItem="s6T-Fn-fkp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KjU-cr-C1C"/>
+                            <constraint firstItem="fZn-Da-mb6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="N3f-1Y-UWv"/>
+                            <constraint firstItem="eKq-63-aFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QEg-k5-dae"/>
+                            <constraint firstItem="fZn-Da-mb6" firstAttribute="top" secondItem="s6T-Fn-fkp" secondAttribute="bottom" constant="32" id="fPD-qU-VDB"/>
+                            <constraint firstItem="fZn-Da-mb6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjM-F9-OEJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="brightnessPicker" destination="s6T-Fn-fkp" id="L6M-4r-hmc"/>
+                        <outlet property="colorPickerView" destination="eKq-63-aFf" id="KcZ-Wp-MFk"/>
+                        <outlet property="outputColorView" destination="fZn-Da-mb6" id="io8-Jc-vR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
