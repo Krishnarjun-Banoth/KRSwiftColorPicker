@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var outputColorView: UIView!
-    
     @IBOutlet weak var colorPickerView: KRColorPicker!
-    
     @IBOutlet weak var brightnessPicker: KRColorPicker!
     
     
@@ -22,9 +20,7 @@ class ViewController: UIViewController {
         colorPickerView.delegate = self
         colorPickerView.type = .color
         outputColorView.layer.cornerRadius = outputColorView.bounds.width / 2
-        
         brightnessPicker.delegate = self
-
         brightnessPicker.type = .brightness
     }
 }

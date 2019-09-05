@@ -86,7 +86,6 @@ class KRColorPicker: UIView {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        
         update()
     }
     
@@ -100,7 +99,6 @@ class KRColorPicker: UIView {
         UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
         
         for x: Int in 0 ..< Int(size.width) {
-            
             switch type {
             case .color:
                 UIColor(hue: CGFloat(CGFloat(x) / size.width), saturation: 1.0, brightness: 1.0, alpha: 1.0).set()
@@ -109,11 +107,9 @@ class KRColorPicker: UIView {
                 UIColor(hue: 0, saturation: 0, brightness: CGFloat(CGFloat(x) / size.width), alpha: 1.0).set()
                 break
             }
-            
             let temp = CGRect(x: CGFloat(x), y: 0, width: 1, height: size.height)
             UIRectFill(temp)
         }
-        
         
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
@@ -167,11 +163,10 @@ class KRColorPicker: UIView {
         }
         
         let circleRect =  CGRect(x: circleX, y: 0, width: radius, height: radius)
-        let circleColor = currentColor
+        let circleColor = UIColor.blue//currentColor
         var hueRect = rect
         
         if hueImage != nil {
-            
             hueRect.size.width -= radius
             hueRect.origin.x += halfRadius
             hueImage.draw(in: hueRect)
