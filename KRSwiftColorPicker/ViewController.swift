@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 extension ViewController: KRColorPickerDelegate {
     func valuePicked(_ color: UIColor, type: KRColorPicker.PickerType, _ brightness: CGFloat) {
         outputColorView.backgroundColor = color
-        outputColorView.addShadow(20, opacity: brightness)
+        outputColorView.addShadow(40, opacity: brightness)
     }
 }
 
@@ -43,7 +43,7 @@ extension UIView {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = CGSize(width: radius, height: radius)
         layer.shadowRadius = radius
-        layer.shadowPath = UIBezierPath(rect: CGRect(x: bounds.minX - 20, y: bounds.minY - 20, width: bounds.width, height: bounds.height)).cgPath
+        layer.shadowPath = UIBezierPath(rect: CGRect(x: bounds.minX - 40, y: bounds.minY - 40, width: bounds.width, height: bounds.height)).cgPath
         layer.shadowOpacity = Float(opacity)
         layer.masksToBounds = false
         layer.shouldRasterize = true
